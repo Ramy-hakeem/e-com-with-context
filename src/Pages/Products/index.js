@@ -13,7 +13,6 @@ const Products = () => {
 
   const { productList, loading, setProductID, setCategory, categories, setShowCategory, showCategory } = useProduct();
 
-
   const { category_id } = useParams()
   useEffect(() => {
     setCategory(category_id)

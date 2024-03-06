@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom'
 import MenuButton from './MenuButton'
 import CartButton from './CartButton'
 import styles from './styles.module.css'
-import { useProduct } from '../../Context/ProductContext'
 import { Disclosure, } from '@headlessui/react'
 import { MenuIcon, XIcon, LogoutIcon } from '@heroicons/react/outline'
 import NAVIGATION from '../../Config/navbarItemList'
 
 const Navbar = () => {
-  const { categories, setCategory, setShowCategory } = useProduct()
+
 
   return (
     <>
@@ -115,24 +114,7 @@ const Navbar = () => {
         )}
       </Disclosure>
       <div className="bg-zinc-900/10 mx-auto h-[1.1px] shadow-sm shadow-zinc-900/10 px-12"></div>
-      {/* <nav className={styles.categoryNav}>
-        <div>
 
-          <h1 className={`truncate ${styles.categoryLink} `} onClick={() => setShowCategory("all")}>
-            All
-          </h1>
-
-        </div>
-        {categories &&
-          categories.map((item, index) =>
-          (
-            <h1 key={`${item}-${index}`} className={`truncate ${styles.categoryLink} `} onClick={() => setShowCategory(item)}>
-              {item}
-            </h1>
-          )
-          )}
-      </nav>
-      <div className="bg-zinc-900/10 mx-auto h-[1px] shadow-sm shadow-zinc-900/10 px-12"></div> */}
     </>
   );
 };
